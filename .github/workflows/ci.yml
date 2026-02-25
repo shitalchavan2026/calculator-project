@@ -1,0 +1,16 @@
+name: C++ CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Compile
+      run: g++ main.cpp -o calculator
+
+    - name: Success Message
+      run: echo "Build Successful"
