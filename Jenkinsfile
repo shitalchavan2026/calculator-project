@@ -2,25 +2,22 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/shitalchavan2026/calculator-project.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo "Build stage running"
-                echo "Build successful"
+                echo 'Build stage running'
             }
         }
 
-        stage('Run') {
+        stage('Test') {
             steps {
-                echo "Application running"
+                echo 'Testing stage running'
             }
         }
 
+        stage('Deploy') {
+            steps {
+                echo 'Deploy stage running'
+            }
+        }
     }
 }
